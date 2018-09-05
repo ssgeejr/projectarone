@@ -1,0 +1,18 @@
+server {
+listen 80;
+   root /opt/htdocs/pasedb;
+   index.jsp;
+   server_name pasedb.org;
+   location / {
+       try_files $uri $uri/ =404;
+   }
+}
+server {
+   listen 80;
+   root /opt/htdocs/projectarone;
+   index.jsp;
+   server_name projectarone.com;
+   location / {
+       try_files $uri $uri/ =404;
+   }
+}
